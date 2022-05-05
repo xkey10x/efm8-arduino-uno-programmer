@@ -9,13 +9,13 @@
 // Flashes EFM8 at about 10kB/s
 // Baud rate: 1000000
 
-// Digital pin 11 on Arduino UNO
+// Digital pin 5 on Arduino UNO
 #define C2D_PORT  PORTD
-#define C2D_PIN   11
+#define C2D_PIN   5
 
-// Digital pin 12 on Arduino UNO
+// Digital pin 6 on Arduino UNO
 #define C2CK_PORT   PORTD
-#define C2CK_PIN    12
+#define C2CK_PIN    6
 
 #define LED LED_BUILTIN 
 
