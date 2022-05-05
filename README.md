@@ -1,18 +1,17 @@
-# efm8-arduino-programmer
-Program EFM8 devices using an Arduino Mega.
+# efm8-arduino-uno-programmer
+Program EFM8 devices using an Arduino UNO.
 
-Thanks to jaromir-sukuba and racerxdl for working on firmware to implement C2 protocol via arduino GPIO.  This work largely pulls from them.
+Thanks to jaromir-sukuba, and racerxdl for working on firmware to implement C2 protocol via arduino GPIO.  This work largely pulls from them, as well as 
+connorpp.
 
 ## Pre-Steps
-Currently, it is for Arduino Mega and maps C2D and C2CK to digital pins 2 and 3, respectively. 
-
-C2 is a 2-pin protocol.  Any arduino should work to implement the protocol via GPIO.  Just need to make sure that the correct pins are mapped for your Arduino.
+C2 is a 2-pin protocol.  Any arduino should work to implement the protocol via GPIO.  Just make sure that the correct pins are mapped for your particular Arduino board. Currently, Arduino UNO maps C2D and C2CK to digital pins 5 and 6, respectively. 
 
 ### Update Pins
-Check the [firmware file](https://github.com/conorpp/efm8-arduino-programmer/blob/master/prog/prog.ino#L11) and change the pins to map to your device if needed.
+Check the [firmware file](https://github.com/xkey10x/efm8-arduino-programmer/blob/master/prog/emf8prog.ino#L11) and change the pins to map to your device if needed.
 
-### Arduino Uno support
-To use it for Arduino Uno you can just swap from E to D. Just replace all `PORTE`, `DDRE` and `PINE` with `PORTD`, `DDRD` and `PIND`. You can read about Port Registers here: https://www.arduino.cc/en/Reference/PortManipulation
+### Arduino Mega support
+To use it for Arduino Uno you can just swap from D to E. Just replace all `PORTD`, `DDRD` and `PIND` with `PORTE`, `DDRE` and `PINE`. You can read about Port Registers here: https://www.arduino.cc/en/Reference/PortManipulation
 
 ### Write firmware to Arduino
 Program the firmware to the arduino and connect C2D, C2CK, and GND to your target device.
